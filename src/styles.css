@@ -1,0 +1,85 @@
+*{
+   margin: 0;
+   padding: 0;
+}
+
+body{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   height: 100vh;
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   background-image: linear-gradient(to bottom, #315fb6, #8d4db8, #d21d98, #fb005e, #ff2600);
+}
+
+#gameboard{
+   width:300px;
+   height: 300px;
+   background-color: black;
+   display: flex;
+   flex-wrap: wrap;
+   border: 1px solid black;
+}
+
+.square{
+   width: 100px;
+   height: 100px;
+   background-color: white;
+   border: 2px black solid;
+   box-sizing: border-box;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.circle{
+   width: 80px;
+   height: 80px;
+   border-radius: 50%;
+   border: 10px solid rgb(49, 95, 182);
+   box-sizing: border-box;
+   transition: ease-in;
+}
+
+.cross{
+   width: 80px;
+   height: 80px;
+   position: relative;
+   transform: rotate(45deg);
+}
+
+.cross:before, .cross:after{
+   /* must have content */
+   content: " ";
+   position:absolute;
+   background-color: rgb(255, 38, 0);
+}
+
+.cross:before{
+   left: 50%;
+   width: 30%;
+   margin-left: -15%;
+   height: 100%;
+}
+
+.cross:after{
+   top: 50%;
+   height: 30%;
+   margin-top: -15%;
+   width: 100%;
+}
+
+.header{
+   font-size: 45px;
+   margin: 15px;
+   font-weight: 700;
+}
+
+
+#info{
+   margin: 15px;
+   text-transform: uppercase;
+   font-size: 30px;
+   font-weight: 500;
+}
